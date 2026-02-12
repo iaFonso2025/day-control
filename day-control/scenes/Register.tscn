@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://c6d184bl5b6j5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rk784"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bdqh"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eml65"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4ptq"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_afkia"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pr50c"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvamt"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Control" type="Control" unique_id=1121967819]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -712.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1318322789]
+layout_mode = 0
+offset_right = 935.0
+offset_bottom = 643.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=896517265]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.003
+anchor_right = 2.1690001
+anchor_bottom = 1.0
+offset_left = 212.0
+offset_top = 0.055999994
+offset_right = -256.36005
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1828107917]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=766198711]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Registro Usuario"
+horizontal_alignment = 1
+
+[node name="EmailInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=235718919]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_rk784")
+placeholder_text = " correo@salesianos.edu"
+
+[node name="NameImput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=537225233]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_7bdqh")
+placeholder_text = " name"
+
+[node name="SurNameInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=662703587]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_eml65")
+placeholder_text = " surname"
+
+[node name="CompanyInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=1426335191]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_l4ptq")
+placeholder_text = " company"
+
+[node name="PassInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=1690677707]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_afkia")
+placeholder_text = " password"
+secret = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1944063160]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=2042536920]
+layout_mode = 2
+theme_override_constants/separation = 63
+
+[node name="Submit" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=164862571]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.56064016, 0.9999998, 0.45854563, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_pr50c")
+text = "Submit"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=439719205]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fvamt")
+text = "Back"
+
+[node name="ErrorLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=936740215]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Error"
+horizontal_alignment = 1

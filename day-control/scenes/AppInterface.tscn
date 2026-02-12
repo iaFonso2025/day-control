@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://c65qaeb4qcwhk"]
+
+[node name="Control" type="Control" unique_id=1764444053]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1241275790]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 1149.0
+offset_bottom = 645.0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=1353423497]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer" unique_id=523617594]
+layout_mode = 2
+
+[node name="UserLabel" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer" unique_id=340807281]
+layout_mode = 2
+text = "Hola, [Nombre]"
+
+[node name="WeeklyHour" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer" unique_id=611529257]
+layout_mode = 2
+text = "Weekly Hour: 00:00"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/PanelContainer" unique_id=414689110]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/CenterContainer" unique_id=168383478]
+layout_mode = 2
+
+[node name="TimerLabel" type="Label" parent="VBoxContainer/PanelContainer/CenterContainer/VBoxContainer" unique_id=646340902]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "00:00"
+horizontal_alignment = 1
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer/PanelContainer/CenterContainer/VBoxContainer" unique_id=693875256]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Jornada no iniciada"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1609004720]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 114.0
+offset_right = 46.0
+offset_bottom = 154.0
+
+[node name="Start" type="Button" parent="HBoxContainer" unique_id=628222504]
+layout_mode = 2
+text = "Start"
+
+[node name="Break" type="Button" parent="HBoxContainer" unique_id=815454448]
+layout_mode = 2
+text = "Break"
+
+[node name="Resume" type="Button" parent="HBoxContainer" unique_id=1320933402]
+layout_mode = 2
+text = "Resume"
+
+[node name="Stop" type="Button" parent="HBoxContainer" unique_id=2016158]
+layout_mode = 2
+text = "Stop"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1618994530]

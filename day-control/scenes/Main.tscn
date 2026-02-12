@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cio5o3un0clm7"]
+
+[node name="Control" type="Control" unique_id=1921818760]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=735146081]
+layout_mode = 0
+offset_right = 529.0
+offset_bottom = 650.0
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=206277081]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.5
+offset_top = -327.5
+offset_right = 262.5
+offset_bottom = 327.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LoginContainer" type="VBoxContainer" parent="ColorRect/CenterContainer" unique_id=2138714231]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="Label" type="Label" parent="ColorRect/CenterContainer/LoginContainer" unique_id=285469828]
+clip_contents = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Salesianos login app"
+
+[node name="HSeparator" type="HSeparator" parent="ColorRect/CenterContainer/LoginContainer" unique_id=344541732]
+layout_mode = 2
+
+[node name="LoginButton" type="Button" parent="ColorRect/CenterContainer/LoginContainer" unique_id=2028084463]
+layout_mode = 2
+text = "Login"
+
+[node name="RegisterButton" type="Button" parent="ColorRect/CenterContainer/LoginContainer" unique_id=1183378265]
+layout_mode = 2
+text = "Register"
