@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://c65qaeb4qcwhk"]
 
+[ext_resource type="Script" uid="uid://dpv81pvy7770e" path="res://scripts/app_interface.gd" id="1_fmfq2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j5q87"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3i7o8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r706y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7702s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jiu2"]
+
 [node name="Control" type="Control" unique_id=1764444053]
 layout_mode = 3
 anchors_preset = 15
@@ -7,65 +19,92 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fmfq2")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1241275790]
-layout_mode = 0
-offset_left = -2.0
-offset_right = 1149.0
-offset_bottom = 645.0
+[node name="ColorRect" type="ColorRect" parent="." unique_id=47064107]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=1353423497]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=504596034]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1551062532]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 40
+
+[node name="HeaderLabel" type="Label" parent="VBoxContainer/MarginContainer" unique_id=1391898798]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=372311643]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_j5q87")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer" unique_id=59154297]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer" unique_id=523617594]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer2" unique_id=1849244304]
 layout_mode = 2
+theme_override_constants/margin_left = 232
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 232
+theme_override_constants/margin_bottom = 70
 
-[node name="UserLabel" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer" unique_id=340807281]
+[node name="MainTimerLabel" type="Label" parent="VBoxContainer/VBoxContainer2/MarginContainer" unique_id=452718808]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Hola, [Nombre]"
-
-[node name="WeeklyHour" type="Label" parent="VBoxContainer/PanelContainer/HBoxContainer" unique_id=611529257]
-layout_mode = 2
-text = "Weekly Hour: 00:00"
-
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/PanelContainer" unique_id=414689110]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/CenterContainer" unique_id=168383478]
-layout_mode = 2
-
-[node name="TimerLabel" type="Label" parent="VBoxContainer/PanelContainer/CenterContainer/VBoxContainer" unique_id=646340902]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
 text = "00:00"
-horizontal_alignment = 1
 
-[node name="StatusLabel" type="Label" parent="VBoxContainer/PanelContainer/CenterContainer/VBoxContainer" unique_id=693875256]
+[node name="HSeparator4" type="HSeparator" parent="VBoxContainer" unique_id=917453539]
+custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Jornada no iniciada"
+theme_override_styles/separator = SubResource("StyleBoxEmpty_3i7o8")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1609004720]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 114.0
-offset_right = 46.0
-offset_bottom = 154.0
-
-[node name="Start" type="Button" parent="HBoxContainer" unique_id=628222504]
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer" unique_id=2046268755]
 layout_mode = 2
-text = "Start"
 
-[node name="Break" type="Button" parent="HBoxContainer" unique_id=815454448]
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/HBoxContainer5" unique_id=553238350]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_r706y")
+
+[node name="WorkButton" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=357638944]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Work"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/HBoxContainer5" unique_id=520699028]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7702s")
+
+[node name="BreakButton" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=786316327]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Break"
 
-[node name="Resume" type="Button" parent="HBoxContainer" unique_id=1320933402]
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/HBoxContainer5" unique_id=441492243]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-text = "Resume"
-
-[node name="Stop" type="Button" parent="HBoxContainer" unique_id=2016158]
-layout_mode = 2
-text = "Stop"
+theme_override_styles/separator = SubResource("StyleBoxEmpty_5jiu2")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1618994530]

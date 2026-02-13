@@ -1,147 +1,208 @@
 [gd_scene format=3 uid="uid://c6d184bl5b6j5"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rk784"]
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 14
+[ext_resource type="Script" uid="uid://5gqtk8defaqe" path="res://scripts/register.gd" id="1_7bdqh"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bdqh"]
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 14
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rk784"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eml65"]
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 14
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7bdqh"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4ptq"]
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 14
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eml65"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_afkia"]
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 14
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l4ptq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pr50c"]
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_afkia"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvamt"]
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pr50c"]
 
-[node name="Control" type="Control" unique_id=1121967819]
+[node name="Control" type="Control" unique_id=630405431]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -712.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7bdqh")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1318322789]
-layout_mode = 0
-offset_right = 935.0
-offset_bottom = 643.0
-
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=896517265]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1247832785]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.003
-anchor_right = 2.1690001
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 212.0
-offset_top = 0.055999994
-offset_right = -256.36005
-offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1828107917]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1785499701]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1246768133]
 layout_mode = 2
-theme_override_constants/separation = 15
-alignment = 1
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=766198711]
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer" unique_id=410383088]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Registro Usuario"
+theme_override_font_sizes/font_size = 50
+text = "Register"
 horizontal_alignment = 1
 
-[node name="EmailInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=235718919]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=189554751]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_rk784")
-placeholder_text = " correo@salesianos.edu"
 
-[node name="NameImput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=537225233]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer2" unique_id=1938313008]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_7bdqh")
-placeholder_text = " name"
 
-[node name="SurNameInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=662703587]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=208054994]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_eml65")
-placeholder_text = " surname"
 
-[node name="CompanyInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=1426335191]
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=497845657]
+custom_minimum_size = Vector2(36, 0)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_l4ptq")
-placeholder_text = " company"
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rk784")
 
-[node name="PassInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=1690677707]
+[node name="EmailInput" type="LineEdit" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=830988737]
+unique_name_in_owner = true
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_afkia")
-placeholder_text = " password"
+size_flags_horizontal = 3
+placeholder_text = "mail@cadiz.salesianos.edu"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=2108501165]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7bdqh")
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1015432214]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_eml65")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1327661267]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=9894002]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rk784")
+
+[node name="NameInput" type="LineEdit" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1669048180]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "name"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1012952762]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7bdqh")
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1313839389]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_eml65")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1327742491]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer3" unique_id=1614833534]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rk784")
+
+[node name="CompanyInput" type="LineEdit" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer3" unique_id=1831858594]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "company"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer3" unique_id=885990464]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7bdqh")
+
+[node name="HSeparator5" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1488386814]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_eml65")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1397321289]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer4" unique_id=447582399]
+custom_minimum_size = Vector2(36, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rk784")
+
+[node name="PassInput" type="LineEdit" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer4" unique_id=541009522]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "password"
 secret = true
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1944063160]
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer4" unique_id=1236756712]
+custom_minimum_size = Vector2(36, 0)
 layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_7bdqh")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=2042536920]
+[node name="HSeparator6" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1288486707]
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
-theme_override_constants/separation = 63
+theme_override_styles/separator = SubResource("StyleBoxEmpty_eml65")
 
-[node name="Submit" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=164862571]
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=184563289]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5" unique_id=1551433033]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_l4ptq")
+
+[node name="Submit" type="Button" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5" unique_id=406464601]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.56064016, 0.9999998, 0.45854563, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_pr50c")
 text = "Submit"
 
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=439719205]
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5" unique_id=251493268]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_afkia")
+
+[node name="Back" type="Button" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5" unique_id=534929392]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_fvamt")
 text = "Back"
 
-[node name="ErrorLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=936740215]
-visible = false
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5" unique_id=836543088]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_pr50c")
+
+[node name="HSeparator7" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=107990812]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_eml65")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=591206313]
+layout_mode = 2
+
+[node name="PassErrorLabel" type="Label" parent="VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer" unique_id=1529328518]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-text = "Error"
-horizontal_alignment = 1
+
+[node name="MailErrorLabel" type="Label" parent="VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer" unique_id=1233769601]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+
+[node name="MailUsedErrorLabel" type="Label" parent="VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer" unique_id=1646451295]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)

@@ -11,7 +11,17 @@ config_version=5
 [application]
 
 config/name="day_control"
+run/main_scene="uid://cio5o3un0clm7"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[autoload]
+
+Manager="*uid://btfkacjr3ddnj"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=900
 
 [gui]
 

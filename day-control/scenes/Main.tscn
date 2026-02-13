@@ -1,5 +1,43 @@
 [gd_scene format=3 uid="uid://cio5o3un0clm7"]
 
+[ext_resource type="Script" uid="uid://daq8qv6v3iknv" path="res://scripts/main.gd" id="1_elqb8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_elqb8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvslj"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0bbpv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rarhs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcsgt"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c01mt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxtc6"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jlsqs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q8u5g"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhr70"]
+
 [node name="Control" type="Control" unique_id=1921818760]
 layout_mode = 3
 anchors_preset = 15
@@ -8,43 +46,139 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+script = ExtResource("1_elqb8")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=735146081]
-layout_mode = 0
-offset_right = 529.0
-offset_bottom = 650.0
-
-[node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=206277081]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -262.5
-offset_top = -327.5
-offset_right = 262.5
-offset_bottom = 327.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LoginContainer" type="VBoxContainer" parent="ColorRect/CenterContainer" unique_id=2138714231]
-layout_mode = 2
-theme_override_constants/separation = 13
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1020167715]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="ColorRect/CenterContainer/LoginContainer" unique_id=285469828]
-clip_contents = true
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=785402119]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 100
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer" unique_id=1584081458]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Salesianos login app"
+theme_override_font_sizes/font_size = 50
+text = "Welcome"
+horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="ColorRect/CenterContainer/LoginContainer" unique_id=344541732]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1817865976]
 layout_mode = 2
 
-[node name="LoginButton" type="Button" parent="ColorRect/CenterContainer/LoginContainer" unique_id=2028084463]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer2" unique_id=1554344365]
 layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1773874592]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1492278305]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_elqb8")
+
+[node name="EmailInput" type="LineEdit" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1556719878]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_rvslj")
+placeholder_text = "Mail"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1405060231]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_0bbpv")
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=264629683]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rarhs")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1234454659]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1790639923]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_elqb8")
+
+[node name="PassInput" type="LineEdit" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=1513684609]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_vcsgt")
+placeholder_text = "Password"
+secret = true
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer2" unique_id=652510604]
+custom_minimum_size = Vector2(50, 25)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_0bbpv")
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1607355697]
+custom_minimum_size = Vector2(0, 170)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_rarhs")
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1638625140]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5" unique_id=1034368376]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_c01mt")
+
+[node name="LoginButton" type="Button" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5" unique_id=697269815]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_nxtc6")
 text = "Login"
 
-[node name="RegisterButton" type="Button" parent="ColorRect/CenterContainer/LoginContainer" unique_id=1183378265]
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5" unique_id=1586817973]
+custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_jlsqs")
+
+[node name="RegisterButton" type="Button" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5" unique_id=1185119984]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_q8u5g")
 text = "Register"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5" unique_id=1117747897]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_lhr70")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1515602614]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer2/VBoxContainer/VBoxContainer" unique_id=847244542]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 100
+
+[node name="ErrorLabel" type="Label" parent="VBoxContainer/MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer" unique_id=175253198]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 41
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5/LoginButton" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer5/RegisterButton" to="." method="_on_register_pressed"]
