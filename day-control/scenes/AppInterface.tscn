@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c65qaeb4qcwhk"]
 
 [ext_resource type="Script" uid="uid://dpv81pvy7770e" path="res://scripts/app_interface.gd" id="1_fmfq2"]
+[ext_resource type="AudioStream" uid="uid://bt7ld1drhs1c3" path="res://sound/alarm.mp3" id="2_3i7o8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j5q87"]
 
@@ -108,3 +109,5 @@ layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_5jiu2")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1618994530]
+unique_name_in_owner = true
+stream = ExtResource("2_3i7o8")
